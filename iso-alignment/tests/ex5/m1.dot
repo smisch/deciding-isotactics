@@ -1,0 +1,11 @@
+digraph {
+  1 [role="start"]
+  5 [role="end"]
+
+  1   -> 2  [label="a"];
+  1   -> 3  [label="b"];
+  1   -> 4  [label="c"];
+  2   -> 5  [label="d"];
+  3   -> 5  [label="e"];
+  4   -> 5  [label="f"];
+}

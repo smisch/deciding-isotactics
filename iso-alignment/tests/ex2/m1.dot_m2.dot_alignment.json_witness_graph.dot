@@ -1,0 +1,41 @@
+digraph {
+  "{1}, {I}, {}" [role="start"]
+  "{3}, {IV}, {(d,e <> x)}" [role="end"]
+  "{3}, {IV}, {(d <> s,x)}" [role="end"]
+  "{3}, {IV}, {(d,e <> w)}" [role="end"]
+
+  "{1}, {I}, {}" ->  "{1}, {II}, {(a <> s,v)}" [label="{a}, {s,v | s,x | s,x | s,w | s,w}", gp1="a", gp2="s,v | s,x | s,x | s,w | s,w"]
+  "{1}, {I}, {}" ->  "{2}, {III}, {(b,c <> t)}" [label="{b,c | b,c}, {t}", gp1="b,c | b,c", gp2="t"]
+  "{1}, {I}, {}" ->  "{3}, {II}, {(d <> s,x)}" [label="{d,e | d,e | d | d}, {s,v | s,x | s,x | s,w | s,w}", gp1="d,e | d,e | d | d", gp2="s,v | s,x | s,x | s,w | s,w"]
+
+  "{1}, {II}, {(a <> s,v)}" ->  "{2}, {I}, {(b,c <> u)}" [label="{b,c | b,c}, {u}", gp1="b,c | b,c", gp2="u"]
+  "{1}, {II}, {(a <> s,v)}" ->  "{3}, {IV}, {(d,e <> x)}" [label="{d,e | d,e | d | d}, {x | s,x | s,x}", gp1="d,e | d,e | d | d", gp2="x | s,x | s,x"]
+  "{1}, {II}, {(a <> s,v)}" ->  "{1}, {II}, {(a <> s,v)}" [label="{a}, {-}", gp1="a", gp2="-"]
+
+  "{2}, {III}, {(b,c <> t)}" ->  "{1}, {III}, {(b,c <> t)}" [label="{b,c | b,c}, {-}", gp1="b,c | b,c", gp2="-"]
+
+  "{3}, {II}, {(d <> s,x)}" ->  "{3}, {IV}, {(d,e <> x)}" [label="{d,e | d,e | e | e}, {x | s,x | s,x}", gp1="d,e | d,e | e | e", gp2="x | s,x | s,x"]
+  "{3}, {II}, {(d <> s,x)}" ->  "{3}, {IV}, {(d <> s,x)}" [label="{-}, {x | s,x | s,x}", gp1="-", gp2="x | s,x | s,x"]
+
+  "{2}, {I}, {(b,c <> u)}" ->  "{1}, {III}, {(b,c <> t)}" [label="{b,c | b,c}, {t}", gp1="b,c | b,c", gp2="t"]
+  "{2}, {I}, {(b,c <> u)}" ->  "{1}, {I}, {(b,c <> u)}" [label="{b,c | b,c}, {-}", gp1="b,c | b,c", gp2="-"]
+
+  "{3}, {IV}, {(d,e <> x)}" ->  "{3}, {IV}, {(d,e <> x)}" [label="{d,e | d,e | e | e}, {-}", gp1="d,e | d,e | e | e", gp2="-"]
+
+  "{1}, {III}, {(b,c <> t)}" ->  "{1}, {I}, {(a <> s,v)}" [label="{a}, {s,v}", gp1="a", gp2="s,v"]
+  "{1}, {III}, {(b,c <> t)}" ->  "{3}, {IV}, {(d,e <> w)}" [label="{d,e | d,e | d | d}, {w | s,w | s,w}", gp1="d,e | d,e | d | d", gp2="w | s,w | s,w"]
+  "{1}, {III}, {(b,c <> t)}" ->  "{2}, {III}, {(b,c <> t)}" [label="{b,c | b,c}, {-}", gp1="b,c | b,c", gp2="-"]
+
+  "{1}, {I}, {(b,c <> u)}" ->  "{1}, {II}, {(a <> s,v)}" [label="{a}, {s,v | s,x | s,x | s,w | s,w}", gp1="a", gp2="s,v | s,x | s,x | s,w | s,w"]
+  "{1}, {I}, {(b,c <> u)}" ->  "{2}, {III}, {(b,c <> t)}" [label="{b,c | b,c}, {t}", gp1="b,c | b,c", gp2="t"]
+  "{1}, {I}, {(b,c <> u)}" ->  "{3}, {II}, {(d <> s,x)}" [label="{d,e | d,e | d | d}, {s,v | s,x | s,x | s,w | s,w}", gp1="d,e | d,e | d | d", gp2="s,v | s,x | s,x | s,w | s,w"]
+  "{1}, {I}, {(b,c <> u)}" ->  "{2}, {I}, {(b,c <> u)}" [label="{b,c | b,c}, {-}", gp1="b,c | b,c", gp2="-"]
+
+  "{1}, {I}, {(a <> s,v)}" ->  "{2}, {III}, {(b,c <> t)}" [label="{b,c | b,c}, {t}", gp1="b,c | b,c", gp2="t"]
+  "{1}, {I}, {(a <> s,v)}" ->  "{3}, {II}, {(d <> s,x)}" [label="{d,e | d,e | d | d}, {s,v | s,x | s,x | s,w | s,w}", gp1="d,e | d,e | d | d", gp2="s,v | s,x | s,x | s,w | s,w"]
+  "{1}, {I}, {(a <> s,v)}" ->  "{1}, {I}, {(a <> s,v)}" [label="{a}, {-}", gp1="a", gp2="-"]
+  "{1}, {I}, {(a <> s,v)}" ->  "{1}, {II}, {(a <> s,v)}" [label="{-}, {s,v | s,x | s,x | s,w | s,w}", gp1="-", gp2="s,v | s,x | s,x | s,w | s,w"]
+
+  "{3}, {IV}, {(d,e <> w)}" ->  "{3}, {IV}, {(d,e <> w)}" [label="{d,e | d,e | e | e}, {-}", gp1="d,e | d,e | e | e", gp2="-"]
+
+}

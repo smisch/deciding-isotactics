@@ -22,4 +22,4 @@ set (Boost_USE_MULTITHREADED ON)
 set (Boost_USE_STATIC_RUNTIME OFF)
 find_package (Boost 1.50 COMPONENTS graph)
 
-subdirs (iso-dev iso-decision iso-lib)
+subdirs (iso-dev iso-decision iso-lib iso-alignment)

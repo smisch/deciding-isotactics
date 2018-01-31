@@ -1,0 +1,4 @@
+digraph {
+  "{1}, {I}, {}" ->  "{2, 3}, {II}, {(a,b,c,d <> s)}" [label="{a,b,c,d}, {s}", gp1="a,b,c,d", gp2="s"]
+  "{2, 3}, {II}, {(a,b,c,d <> s)}" ->  "{4, 4}, {II}, {(a,b,c,d <> s)}" [label="{a,b,c,d}, {-}", gp1="a,b,c,d", gp2="-"]
+}

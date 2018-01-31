@@ -1,0 +1,3 @@
+2017-12-07 14:59:31,820 INFO [default] My first info log using default logger
+2017-12-07 14:59:31,821 DEBUG [default] [Sebastian@unknown-host] [int main()] [/Users/Sebastian/Dropbox/Diplomarbeit/deciding-isotactics/iso-alignment/src/Main.cpp:33] My first debug log using default logger
+2017-12-07 14:59:31,821 FATAL [iso-lib] My first debug log using iso-lib logger

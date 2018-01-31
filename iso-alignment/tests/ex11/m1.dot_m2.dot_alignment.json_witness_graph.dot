@@ -1,0 +1,20 @@
+digraph {
+  "{1}, {I}, {}" [role="start"]
+  "{4}, {IV}, {(a,b <> x)}" [role="end"]
+
+  "{1}, {I}, {}" ->  "{2}, {II}, {(a <> x,y)}" [label="{a | a,b}, {x,y | x}", gp1="a | a,b", gp2="x,y | x"]
+
+  "{2}, {II}, {(a <> x,y)}" ->  "{3}, {II}, {(a <> x,y)}" [label="{a | a,b}, {-}", gp1="a | a,b", gp2="-"]
+  "{2}, {II}, {(a <> x,y)}" ->  "{2}, {III}, {(a <> x,y)}" [label="{-}, {x,y}", gp1="-", gp2="x,y"]
+
+  "{3}, {II}, {(a <> x,y)}" ->  "{3}, {III}, {(a <> x,y)}" [label="{-}, {x,y}", gp1="-", gp2="x,y"]
+
+  "{2}, {III}, {(a <> x,y)}" ->  "{3}, {III}, {(a <> x,y)}" [label="{a | a,b}, {-}", gp1="a | a,b", gp2="-"]
+  "{2}, {III}, {(a <> x,y)}" ->  "{2}, {IV}, {(a <> x,y)}" [label="{-}, {x,y | x}", gp1="-", gp2="x,y | x"]
+
+  "{3}, {III}, {(a <> x,y)}" ->  "{4}, {IV}, {(a,b <> x)}" [label="{a,b}, {x,y | x}", gp1="a,b", gp2="x,y | x"]
+  "{3}, {III}, {(a <> x,y)}" ->  "{3}, {IV}, {(a <> x,y)}" [label="{-}, {x,y | x}", gp1="-", gp2="x,y | x"]
+
+  "{2}, {IV}, {(a <> x,y)}" ->  "{3}, {IV}, {(a <> x,y)}" [label="{a | a,b}, {-}", gp1="a | a,b", gp2="-"]
+
+}

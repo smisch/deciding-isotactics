@@ -1,0 +1,67 @@
+digraph RelationGraph{
+"" [style=filled fillcolor=black width=0.15 height=0.15]
+label="S1={a,b,c,d}, S2={s}";
+labelloc="t";
+node [color=grey]
+"(a,s),(c,s),(d,s)
+p=3"[fontcolor=grey]
+"(a,s),(b,s),(d,s)
+p=3"[fontcolor=grey]
+"(a,s),(b,s),(c,s)
+p=3"[fontcolor=grey]
+"(c,s),(d,s)
+p=2"[fontcolor=grey]
+"(b,s),(c,s)
+p=2"[fontcolor=grey]
+"(a,s),(d,s)
+p=2"[fontcolor=grey]
+"(b,s),(d,s)
+p=2"[fontcolor=grey]
+"(a,s),(c,s)
+p=2"[fontcolor=grey]
+"(b,s),(c,s),(d,s)
+p=3"[fontcolor=grey]
+"(a,s),(b,s)
+p=2"[fontcolor=grey]
+  "" -> "(a,s)
+p=1" []
+  "" -> "(b,s)
+p=1" []
+  "" -> "(c,s)
+p=1" []
+  "" -> "(d,s)
+p=1" []
+  "(a,s)
+p=1" -> "(a,s),(b,s)
+p=2" []
+  "(a,s)
+p=1" -> "(a,s),(c,s)
+p=2" []
+  "(a,s)
+p=1" -> "(a,s),(d,s)
+p=2" []
+  "(b,s)
+p=1" -> "(b,s),(c,s)
+p=2" []
+  "(b,s)
+p=1" -> "(b,s),(d,s)
+p=2" []
+  "(a,s),(b,s)
+p=2" -> "(a,s),(b,s),(c,s)
+p=3" []
+  "(a,s),(b,s)
+p=2" -> "(a,s),(b,s),(d,s)
+p=3" []
+  "(c,s)
+p=1" -> "(c,s),(d,s)
+p=2" []
+  "(a,s),(c,s)
+p=2" -> "(a,s),(c,s),(d,s)
+p=3" []
+  "(b,s),(c,s)
+p=2" -> "(b,s),(c,s),(d,s)
+p=3" []
+  "(a,s),(b,s),(c,s)
+p=3" -> "(a,s),(b,s),(c,s),(d,s)
+p=4" []
+}

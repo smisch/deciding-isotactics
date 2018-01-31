@@ -1,0 +1,20 @@
+digraph {
+  "{1}, {I}, {}" [role="start"]
+  "{6}, {V}, {(a,e,f <> v)}" [role="end"]
+
+  "{1}, {I}, {}" ->  "{2}, {II}, {(a <> s,t)}" [label="{a | a,b | a,b | a,b,d | a,b,d | a,e,f | a | a | a,b,d | a,b,d | a,e,f}, {s,t | s,t | s | s | s,t,u | s,t,v | s,t,v | s,t | t,s,u | s}", gp1="a | a,b | a,b | a,b,d | a,b,d | a,e,f | a | a | a,b,d | a,b,d | a,e,f", gp2="s,t | s,t | s | s | s,t,u | s,t,v | s,t,v | s,t | t,s,u | s"]
+
+  "{2}, {II}, {(a <> s,t)}" ->  "{3}, {III}, {(b <> s,t)}" [label="{b | a,b | a,b | a,b,d | a,b,d | b | a,b,d | a,b,d}, {s,t | s,t | t | t | s,t,u | s,t,v | s,t,v | s,t | t,s,u | t}", gp1="b | a,b | a,b | a,b,d | a,b,d | b | a,b,d | a,b,d", gp2="s,t | s,t | t | t | s,t,u | s,t,v | s,t,v | s,t | t,s,u | t"]
+  "{2}, {II}, {(a <> s,t)}" ->  "{2}, {III}, {(a <> s,t)}" [label="{-}, {s,t | s,t | t | t | s,t,u | s,t,v | s,t,v | s,t | t,s,u | t}", gp1="-", gp2="s,t | s,t | t | t | s,t,u | s,t,v | s,t,v | s,t | t,s,u | t"]
+
+  "{3}, {III}, {(b <> s,t)}" ->  "{5}, {IV}, {(d <> s,t,u)}" [label="{a,b,d | a,b,d | d | d | a,b,d | a,b,d | c,d}, {s,t,u | u | t,s,u | u}", gp1="a,b,d | a,b,d | d | d | a,b,d | a,b,d | c,d", gp2="s,t,u | u | t,s,u | u"]
+
+  "{2}, {III}, {(a <> s,t)}" ->  "{4}, {IV}, {(c <> u)}" [label="{c | c,d}, {s,t,u | u | t,s,u | u}", gp1="c | c,d", gp2="s,t,u | u | t,s,u | u"]
+
+  "{5}, {IV}, {(d <> s,t,u)}" ->  "{6}, {V}, {(a,e,f <> v)}" [label="{a,e,f | f | a,e,f}, {v | s,t,v | s,t,v | v | v | v}", gp1="a,e,f | f | a,e,f", gp2="v | s,t,v | s,t,v | v | v | v"]
+
+  "{4}, {IV}, {(c <> u)}" ->  "{5}, {V}, {(a,e,f <> v)}" [label="{a,e,f | e | a,e,f}, {v | s,t,v | s,t,v | v | v | v}", gp1="a,e,f | e | a,e,f", gp2="v | s,t,v | s,t,v | v | v | v"]
+
+  "{5}, {V}, {(a,e,f <> v)}" ->  "{6}, {V}, {(a,e,f <> v)}" [label="{a,e,f | f | a,e,f}, {-}", gp1="a,e,f | f | a,e,f", gp2="-"]
+
+}

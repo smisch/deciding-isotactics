@@ -1,0 +1,10 @@
+digraph {
+  "{1}, {I}, {}" ->  "{2}, {II}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {s | s,t}", gp1="a,b,c | a,c", gp2="s | s,t"]
+  "{2}, {II}, {(a,b,c <> s)}" ->  "{3}, {II}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+  "{2}, {II}, {(a,b,c <> s)}" ->  "{2}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+  "{3}, {II}, {(a,b,c <> s)}" ->  "{4}, {II}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+  "{3}, {II}, {(a,b,c <> s)}" ->  "{3}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+  "{2}, {III}, {(a,b,c <> s)}" ->  "{3}, {III}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+  "{4}, {II}, {(a,b,c <> s)}" ->  "{4}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+  "{3}, {III}, {(a,b,c <> s)}" ->  "{4}, {III}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+}

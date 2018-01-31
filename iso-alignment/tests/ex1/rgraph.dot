@@ -1,0 +1,303 @@
+digraph RelationGraph{
+"" [style=filled fillcolor=black width=0.15 height=0.15]
+label="S1={a,b,c}, S2={s,t}";
+labelloc="t";
+node [color=grey label=""]
+"(a,s),(b,s),(c,s),(a,t),(b,t),(c,t)
+p=3"[color=forestgreen peripheries=2]
+"(b,s),(c,s),(a,t),(b,t),(c,t)
+p=3"[color=red]
+"(a,s),(c,s),(a,t),(b,t),(c,t)
+p=3"[color=forestgreen peripheries=2]
+"(a,s),(b,s),(a,t),(b,t),(c,t)
+p=3"[color=forestgreen peripheries=2]
+"(a,s),(b,s),(c,s),(b,t),(c,t)
+p=3"[color=forestgreen peripheries=2]
+"(a,s),(b,s),(c,s),(a,t),(c,t)
+p=3"[color=red]
+"(a,s),(b,s),(c,s),(a,t),(b,t)
+p=3"[color=red]
+"(c,s),(a,t),(b,t),(c,t)
+p=3"[color=red]
+"(b,s),(a,t),(b,t),(c,t)
+p=3"[color=red]
+"(b,s),(c,s),(b,t),(c,t)
+p=2"[fontcolor=grey]
+"(b,s),(c,s),(a,t),(c,t)
+p=2"[color=red]
+"(b,s),(c,s),(a,t),(b,t)
+p=2"[color=red]
+"(a,s),(c,s),(a,t),(c,t)
+p=2"[fontcolor=grey]
+"(a,s),(c,s),(a,t),(b,t)
+p=2"[color=red]
+"(a,s),(b,s),(b,t),(c,t)
+p=2"[color=forestgreen peripheries=2]
+"(a,s),(b,s),(a,t),(c,t)
+p=2"[color=forestgreen peripheries=2]
+"(a,s),(b,s),(a,t),(b,t)
+p=2"[fontcolor=grey]
+"(a,s),(b,s),(c,s),(c,t)
+p=3"[color=forestgreen peripheries=2]
+"(a,s),(b,s),(c,s),(b,t)
+p=3"[color=red]
+"(a,s),(b,s),(c,s),(a,t)
+p=3"[color=red]
+"(c,s),(a,t),(c,t)
+p=2"[fontcolor=grey]
+"(c,s),(a,t),(b,t)
+p=2"[color=red]
+"(b,s),(a,t),(c,t)
+p=2"[color=red]
+"(b,s),(a,t),(b,t)
+p=2"[fontcolor=grey]
+"(b,s),(c,s),(c,t)
+p=2"[fontcolor=grey]
+"(b,s),(c,s),(b,t)
+p=2"[fontcolor=grey]
+"(b,s),(c,s),(a,t)
+p=2"[color=red]
+"(a,s),(b,t),(c,t)
+p=2"[color=forestgreen peripheries=2]
+"(a,s),(a,t),(c,t)
+p=2"[fontcolor=grey]
+"(a,s),(c,s),(c,t)
+p=2"[fontcolor=grey]
+"(a,s),(c,s),(b,t)
+p=2"[color=red]
+"(a,s),(b,s),(b,t)
+p=2"[fontcolor=grey]
+"(a,s),(b,s),(c,s)
+p=3"[fontcolor=grey]
+"(a,s),(a,t),(b,t)
+p=2"[fontcolor=grey]
+"(b,t),(c,t)
+p=2"[fontcolor=grey]
+"(a,t),(b,t)
+p=2"[fontcolor=grey]
+"(a,s),(c,s),(a,t)
+p=2"[fontcolor=grey]
+"(c,s),(c,t)
+p=2"[fontcolor=grey]
+"(a,s),(b,s),(c,t)
+p=2"[color=forestgreen peripheries=2]
+"(c,s),(a,t)
+p=1"[fontcolor=grey]
+"(a,s),(b,s),(a,t)
+p=2"[fontcolor=grey]
+"(b,s),(c,t)
+p=1"[fontcolor=grey]
+"(b,s),(b,t)
+p=2"[fontcolor=grey]
+"(a,s),(c,t)
+p=1"[fontcolor=grey]
+"(a,s),(a,t),(b,t),(c,t)
+p=3"[color=forestgreen peripheries=2]
+"(b,s),(a,t)
+p=1"[fontcolor=grey]
+"(a,s),(c,s),(b,t),(c,t)
+p=2"[color=forestgreen peripheries=2]
+"(b,s),(c,s)
+p=2"[fontcolor=grey]
+"(a,t),(c,t)
+p=2"[fontcolor=grey]
+"(a,s),(b,t)
+p=1"[fontcolor=grey]
+"(c,s),(b,t)
+p=1"[fontcolor=grey]
+"(a,t),(b,t),(c,t)
+p=3"[fontcolor=grey]
+"(a,s),(a,t)
+p=2"[fontcolor=grey]
+"(c,s),(b,t),(c,t)
+p=2"[fontcolor=grey]
+"(a,s),(c,s)
+p=2"[fontcolor=grey]
+"(b,s),(b,t),(c,t)
+p=2"[fontcolor=grey]
+"(a,s),(b,s)
+p=2"[fontcolor=grey]
+  "" -> "(a,s)
+p=1" []
+  "" -> "(b,s)
+p=1" []
+  "" -> "(c,s)
+p=1" []
+  "" -> "(a,t)
+p=1" []
+  "" -> "(b,t)
+p=1" []
+  "" -> "(c,t)
+p=1" []
+  "(a,s)
+p=1" -> "(a,s),(b,s)
+p=2" []
+  "(a,s)
+p=1" -> "(a,s),(c,s)
+p=2" []
+  "(a,s)
+p=1" -> "(a,s),(a,t)
+p=2" []
+  "(a,s)
+p=1" -> "(a,s),(b,t)
+p=1" []
+  "(a,s)
+p=1" -> "(a,s),(c,t)
+p=1" []
+  "(b,s)
+p=1" -> "(b,s),(c,s)
+p=2" []
+  "(b,s)
+p=1" -> "(b,s),(a,t)
+p=1" []
+  "(b,s)
+p=1" -> "(b,s),(b,t)
+p=2" []
+  "(b,s)
+p=1" -> "(b,s),(c,t)
+p=1" []
+  "(a,s),(b,s)
+p=2" -> "(a,s),(b,s),(c,s)
+p=3" []
+  "(a,s),(b,s)
+p=2" -> "(a,s),(b,s),(a,t)
+p=2" []
+  "(a,s),(b,s)
+p=2" -> "(a,s),(b,s),(b,t)
+p=2" []
+  "(a,s),(b,s)
+p=2" -> "(a,s),(b,s),(c,t)
+p=2" []
+  "(c,s)
+p=1" -> "(c,s),(a,t)
+p=1" []
+  "(c,s)
+p=1" -> "(c,s),(b,t)
+p=1" []
+  "(c,s)
+p=1" -> "(c,s),(c,t)
+p=2" []
+  "(a,s),(c,s)
+p=2" -> "(a,s),(c,s),(a,t)
+p=2" []
+  "(a,s),(c,s)
+p=2" -> "(a,s),(c,s),(b,t)
+p=2" []
+  "(a,s),(c,s)
+p=2" -> "(a,s),(c,s),(c,t)
+p=2" []
+  "(b,s),(c,s)
+p=2" -> "(b,s),(c,s),(a,t)
+p=2" []
+  "(b,s),(c,s)
+p=2" -> "(b,s),(c,s),(b,t)
+p=2" []
+  "(b,s),(c,s)
+p=2" -> "(b,s),(c,s),(c,t)
+p=2" []
+  "(a,s),(b,s),(c,s)
+p=3" -> "(a,s),(b,s),(c,s),(a,t)
+p=3" []
+  "(a,s),(b,s),(c,s)
+p=3" -> "(a,s),(b,s),(c,s),(b,t)
+p=3" []
+  "(a,s),(b,s),(c,s)
+p=3" -> "(a,s),(b,s),(c,s),(c,t)
+p=3" []
+  "(a,t)
+p=1" -> "(a,t),(b,t)
+p=2" []
+  "(a,t)
+p=1" -> "(a,t),(c,t)
+p=2" []
+  "(a,s),(a,t)
+p=2" -> "(a,s),(a,t),(b,t)
+p=2" []
+  "(a,s),(a,t)
+p=2" -> "(a,s),(a,t),(c,t)
+p=2" []
+  "(b,s),(a,t)
+p=1" -> "(b,s),(a,t),(b,t)
+p=2" []
+  "(b,s),(a,t)
+p=1" -> "(b,s),(a,t),(c,t)
+p=2" []
+  "(a,s),(b,s),(a,t)
+p=2" -> "(a,s),(b,s),(a,t),(b,t)
+p=2" []
+  "(a,s),(b,s),(a,t)
+p=2" -> "(a,s),(b,s),(a,t),(c,t)
+p=2" []
+  "(c,s),(a,t)
+p=1" -> "(c,s),(a,t),(b,t)
+p=2" []
+  "(c,s),(a,t)
+p=1" -> "(c,s),(a,t),(c,t)
+p=2" []
+  "(a,s),(c,s),(a,t)
+p=2" -> "(a,s),(c,s),(a,t),(b,t)
+p=2" []
+  "(a,s),(c,s),(a,t)
+p=2" -> "(a,s),(c,s),(a,t),(c,t)
+p=2" []
+  "(b,s),(c,s),(a,t)
+p=2" -> "(b,s),(c,s),(a,t),(b,t)
+p=2" []
+  "(b,s),(c,s),(a,t)
+p=2" -> "(b,s),(c,s),(a,t),(c,t)
+p=2" []
+  "(a,s),(b,s),(c,s),(a,t)
+p=3" -> "(a,s),(b,s),(c,s),(a,t),(b,t)
+p=3" []
+  "(a,s),(b,s),(c,s),(a,t)
+p=3" -> "(a,s),(b,s),(c,s),(a,t),(c,t)
+p=3" []
+  "(b,t)
+p=1" -> "(b,t),(c,t)
+p=2" []
+  "(a,s),(b,t)
+p=1" -> "(a,s),(b,t),(c,t)
+p=2" []
+  "(b,s),(b,t)
+p=2" -> "(b,s),(b,t),(c,t)
+p=2" []
+  "(a,s),(b,s),(b,t)
+p=2" -> "(a,s),(b,s),(b,t),(c,t)
+p=2" []
+  "(c,s),(b,t)
+p=1" -> "(c,s),(b,t),(c,t)
+p=2" []
+  "(a,s),(c,s),(b,t)
+p=2" -> "(a,s),(c,s),(b,t),(c,t)
+p=2" []
+  "(b,s),(c,s),(b,t)
+p=2" -> "(b,s),(c,s),(b,t),(c,t)
+p=2" []
+  "(a,s),(b,s),(c,s),(b,t)
+p=3" -> "(a,s),(b,s),(c,s),(b,t),(c,t)
+p=3" []
+  "(a,t),(b,t)
+p=2" -> "(a,t),(b,t),(c,t)
+p=3" []
+  "(a,s),(a,t),(b,t)
+p=2" -> "(a,s),(a,t),(b,t),(c,t)
+p=3" []
+  "(b,s),(a,t),(b,t)
+p=2" -> "(b,s),(a,t),(b,t),(c,t)
+p=3" []
+  "(a,s),(b,s),(a,t),(b,t)
+p=2" -> "(a,s),(b,s),(a,t),(b,t),(c,t)
+p=3" []
+  "(c,s),(a,t),(b,t)
+p=2" -> "(c,s),(a,t),(b,t),(c,t)
+p=3" []
+  "(a,s),(c,s),(a,t),(b,t)
+p=2" -> "(a,s),(c,s),(a,t),(b,t),(c,t)
+p=3" []
+  "(b,s),(c,s),(a,t),(b,t)
+p=2" -> "(b,s),(c,s),(a,t),(b,t),(c,t)
+p=3" []
+  "(a,s),(b,s),(c,s),(a,t),(b,t)
+p=3" -> "(a,s),(b,s),(c,s),(a,t),(b,t),(c,t)
+p=3" []
+}

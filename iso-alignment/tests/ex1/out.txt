@@ -1,0 +1,522 @@
+working on: {1}, {I}, {}
+  checking rule 1:
+    found new match set
+    a, s, {(a,b,c <> s)}
+    new Vertex: {2}, {II}, {(a,b,c <> s)}
+    new vertex doesn't exist. add vertex, add edge, add todo
+
+  checking rule 2:
+    g1 moves:
+  checking rule 2:
+    g2 moves:
+Todo:
+  {2}, {II}, {(a,b,c <> s)}
+
+
+
+working on: {2}, {II}, {(a,b,c <> s)}
+  checking rule 1:
+  checking rule 2:
+    g1 moves:
+    found new match set
+    a, {(a,b,c <> s)}
+    new Vertex: {3}, {II}, {(a,b,c <> s)}
+
+   new vertex doesn't exist. add node, add edge, add todo! 
+  checking rule 2:
+    g2 moves:
+    found new match set
+    s, {(a,b,c <> s)}
+    new Vertex: {2}, {III}, {(a,b,c <> s)}
+
+   new vertex doesn't exist. add node, add edge, add todo! 
+Todo:
+  {3}, {II}, {(a,b,c <> s)}
+  {2}, {III}, {(a,b,c <> s)}
+
+
+
+working on: {3}, {II}, {(a,b,c <> s)}
+  checking rule 1:
+  checking rule 2:
+    g1 moves:
+    found new match set
+    a, {(a,b,c <> s)}
+    new Vertex: {4}, {II}, {(a,b,c <> s)}
+
+   new vertex doesn't exist. add node, add edge, add todo! 
+  checking rule 2:
+    g2 moves:
+    found new match set
+    s, {(a,b,c <> s)}
+    new Vertex: {3}, {III}, {(a,b,c <> s)}
+
+   new vertex doesn't exist. add node, add edge, add todo! 
+Todo:
+  {2}, {III}, {(a,b,c <> s)}
+  {4}, {II}, {(a,b,c <> s)}
+  {3}, {III}, {(a,b,c <> s)}
+
+
+
+working on: {2}, {III}, {(a,b,c <> s)}
+  checking rule 1:
+  checking rule 2:
+    g1 moves:
+    found new match set
+    a, {(a,b,c <> s)}
+    new Vertex: {3}, {III}, {(a,b,c <> s)}
+
+   new vertex already exists. adding edge, not todo 
+  checking rule 2:
+    g2 moves:
+Todo:
+  {4}, {II}, {(a,b,c <> s)}
+  {3}, {III}, {(a,b,c <> s)}
+
+
+
+working on: {4}, {II}, {(a,b,c <> s)}
+  checking rule 1:
+  checking rule 2:
+    g1 moves:
+  checking rule 2:
+    g2 moves:
+    found new match set
+    s, {(a,b,c <> s)}
+    new Vertex: {4}, {III}, {(a,b,c <> s)}
+
+   new vertex doesn't exist. add node, add edge, add todo! 
+Todo:
+  {3}, {III}, {(a,b,c <> s)}
+  {4}, {III}, {(a,b,c <> s)}
+
+
+
+working on: {3}, {III}, {(a,b,c <> s)}
+  checking rule 1:
+  checking rule 2:
+    g1 moves:
+    found new match set
+    a, {(a,b,c <> s)}
+    new Vertex: {4}, {III}, {(a,b,c <> s)}
+
+   new vertex already exists. adding edge, not todo 
+  checking rule 2:
+    g2 moves:
+Todo:
+  {4}, {III}, {(a,b,c <> s)}
+
+
+
+working on: {4}, {III}, {(a,b,c <> s)}
+  checking rule 1:
+  checking rule 2:
+    g1 moves:
+  checking rule 2:
+    g2 moves:
+
+   Witness Graph done: 
+digraph {
+  "{1}, {I}, {}" ->  "{2}, {II}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {s | s,t}", gp1="a,b,c | a,c", gp2="s | s,t"]
+
+  "{2}, {II}, {(a,b,c <> s)}" ->  "{3}, {II}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+  "{2}, {II}, {(a,b,c <> s)}" ->  "{2}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+
+  "{3}, {II}, {(a,b,c <> s)}" ->  "{4}, {II}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+  "{3}, {II}, {(a,b,c <> s)}" ->  "{3}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+
+  "{2}, {III}, {(a,b,c <> s)}" ->  "{3}, {III}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+
+  "{4}, {II}, {(a,b,c <> s)}" ->  "{4}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+
+  "{3}, {III}, {(a,b,c <> s)}" ->  "{4}, {III}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+
+}
+
+
+
+
+
+
+
+
+
+
+## DWG::createLhs ##
+checking node: {({1}, {I}, {})}
+  out edges:
+  "{1}, {I}, {}" ->  "{2}, {II}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {s | s,t}", gp1="a,b,c | a,c", gp2="s | s,t"]
+
+  grouping a,b,c:
+    no edge for label, adding edge to empty state
+
+
+  grouping a,b,c | a,c:
+    has edge for label
+    label: a,b,c | a,c
+    edges:
+  "{1}, {I}, {}" ->  "{2}, {II}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {s | s,t}", gp1="a,b,c | a,c", gp2="s | s,t"]
+    destinations:
+{2}, {II}, {(a,b,c <> s)}
+    dsts are sub: 0
+[findAllNodes] start at {2}, {II}, {(a,b,c <> s)}
+  [findAllNodes] checking node {2}, {II}, {(a,b,c <> s)} (1)
+  [findAllNodes] out edges:
+  "{2}, {II}, {(a,b,c <> s)}" ->  "{3}, {II}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+  "{2}, {II}, {(a,b,c <> s)}" ->  "{2}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+  [findAllNodes] empty edges:
+  "{2}, {II}, {(a,b,c <> s)}" ->  "{2}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+    [findAllNodes] checking dst {2}, {III}, {(a,b,c <> s)}
+    [findAllNodes] not visited, not contained -> adding node {2}, {III}, {(a,b,c <> s)}
+  [findAllNodes] checking node {2}, {III}, {(a,b,c <> s)} (3)
+  [findAllNodes] out edges:
+  "{2}, {III}, {(a,b,c <> s)}" ->  "{3}, {III}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+  [findAllNodes] no empty edge
+[findAllNodes] done.
+
+    current vertex: {({2}, {II}, {(a,b,c <> s)}), ({2}, {III}, {(a,b,c <> s)})} role: 
+    vertex is new, adding vertex, edge and todo
+
+
+
+Todo:
+{({2}, {II}, {(a,b,c <> s)}), ({2}, {III}, {(a,b,c <> s)})}
+
+
+
+checking node: {({2}, {II}, {(a,b,c <> s)}), ({2}, {III}, {(a,b,c <> s)})}
+  out edges:
+  "{2}, {II}, {(a,b,c <> s)}" ->  "{3}, {II}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+  "{2}, {II}, {(a,b,c <> s)}" ->  "{2}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+  "{2}, {III}, {(a,b,c <> s)}" ->  "{3}, {III}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+
+  grouping a,b,c:
+    no edge for label, adding edge to empty state
+
+
+  grouping a,b,c | a,c:
+    has edge for label
+    label: a,b,c | a,c
+    edges:
+  "{2}, {II}, {(a,b,c <> s)}" ->  "{3}, {II}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+  "{2}, {III}, {(a,b,c <> s)}" ->  "{3}, {III}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+    destinations:
+{3}, {II}, {(a,b,c <> s)}
+{3}, {III}, {(a,b,c <> s)}
+    dsts are sub: 0
+[findAllNodes] start at {3}, {II}, {(a,b,c <> s)}
+  [findAllNodes] checking node {3}, {II}, {(a,b,c <> s)} (2)
+  [findAllNodes] out edges:
+  "{3}, {II}, {(a,b,c <> s)}" ->  "{4}, {II}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+  "{3}, {II}, {(a,b,c <> s)}" ->  "{3}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+  [findAllNodes] empty edges:
+  "{3}, {II}, {(a,b,c <> s)}" ->  "{3}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+    [findAllNodes] checking dst {3}, {III}, {(a,b,c <> s)}
+    [findAllNodes] already contained
+[findAllNodes] start at {3}, {III}, {(a,b,c <> s)}
+  [findAllNodes] checking node {3}, {III}, {(a,b,c <> s)} (5)
+  [findAllNodes] out edges:
+  "{3}, {III}, {(a,b,c <> s)}" ->  "{4}, {III}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+  [findAllNodes] no empty edge
+[findAllNodes] done.
+
+    current vertex: {({3}, {II}, {(a,b,c <> s)}), ({3}, {III}, {(a,b,c <> s)})} role: 
+    vertex is new, adding vertex, edge and todo
+
+
+
+Todo:
+{({3}, {II}, {(a,b,c <> s)}), ({3}, {III}, {(a,b,c <> s)})}
+
+
+
+checking node: {({3}, {II}, {(a,b,c <> s)}), ({3}, {III}, {(a,b,c <> s)})}
+  out edges:
+  "{3}, {II}, {(a,b,c <> s)}" ->  "{4}, {II}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+  "{3}, {II}, {(a,b,c <> s)}" ->  "{3}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+  "{3}, {III}, {(a,b,c <> s)}" ->  "{4}, {III}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+
+  grouping a,b,c:
+    no edge for label, adding edge to empty state
+
+
+  grouping a,b,c | a,c:
+    has edge for label
+    label: a,b,c | a,c
+    edges:
+  "{3}, {II}, {(a,b,c <> s)}" ->  "{4}, {II}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+  "{3}, {III}, {(a,b,c <> s)}" ->  "{4}, {III}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+    destinations:
+{4}, {II}, {(a,b,c <> s)}
+{4}, {III}, {(a,b,c <> s)}
+    dsts are sub: 0
+[findAllNodes] start at {4}, {II}, {(a,b,c <> s)}
+  [findAllNodes] checking node {4}, {II}, {(a,b,c <> s)} (4)
+  [findAllNodes] out edges:
+  "{4}, {II}, {(a,b,c <> s)}" ->  "{4}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+  [findAllNodes] empty edges:
+  "{4}, {II}, {(a,b,c <> s)}" ->  "{4}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+    [findAllNodes] checking dst {4}, {III}, {(a,b,c <> s)}
+    [findAllNodes] already contained
+[findAllNodes] start at {4}, {III}, {(a,b,c <> s)}
+  [findAllNodes] checking node {4}, {III}, {(a,b,c <> s)} (6)
+  [findAllNodes] no out edges, done.
+[findAllNodes] done.
+
+    current vertex: {({4}, {II}, {(a,b,c <> s)}), ({4}, {III}, {(a,b,c <> s)})} role: end
+    vertex is new, adding vertex, edge and todo
+
+
+
+Todo:
+{({4}, {II}, {(a,b,c <> s)}), ({4}, {III}, {(a,b,c <> s)})}
+
+
+
+checking node: {({4}, {II}, {(a,b,c <> s)}), ({4}, {III}, {(a,b,c <> s)})}
+  out edges:
+  "{4}, {II}, {(a,b,c <> s)}" ->  "{4}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+
+  grouping a,b,c:
+    no edge for label, adding edge to empty state
+
+
+  grouping a,b,c | a,c:
+    no edge for label, adding edge to empty state
+
+
+
+Todo:
+
+
+
+## DWG::createRhs ##
+checking node: {({1}, {I}, {})}
+  out edges:
+  "{1}, {I}, {}" ->  "{2}, {II}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {s | s,t}", gp1="a,b,c | a,c", gp2="s | s,t"]
+
+  grouping s | s,t:
+    has edge for label
+    label: s | s,t
+    edges:
+  "{1}, {I}, {}" ->  "{2}, {II}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {s | s,t}", gp1="a,b,c | a,c", gp2="s | s,t"]
+    destinations:
+{2}, {II}, {(a,b,c <> s)}
+    dsts are sub: 0
+[findAllNodes] start at {2}, {II}, {(a,b,c <> s)}
+  [findAllNodes] checking node {2}, {II}, {(a,b,c <> s)} (1)
+  [findAllNodes] out edges:
+  "{2}, {II}, {(a,b,c <> s)}" ->  "{3}, {II}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+  "{2}, {II}, {(a,b,c <> s)}" ->  "{2}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+  [findAllNodes] empty edges:
+  "{2}, {II}, {(a,b,c <> s)}" ->  "{3}, {II}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+    [findAllNodes] checking dst {3}, {II}, {(a,b,c <> s)}
+    [findAllNodes] not visited, not contained -> adding node {3}, {II}, {(a,b,c <> s)}
+  [findAllNodes] checking node {3}, {II}, {(a,b,c <> s)} (2)
+  [findAllNodes] out edges:
+  "{3}, {II}, {(a,b,c <> s)}" ->  "{4}, {II}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+  "{3}, {II}, {(a,b,c <> s)}" ->  "{3}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+  [findAllNodes] empty edges:
+  "{3}, {II}, {(a,b,c <> s)}" ->  "{4}, {II}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+    [findAllNodes] checking dst {4}, {II}, {(a,b,c <> s)}
+    [findAllNodes] not visited, not contained -> adding node {4}, {II}, {(a,b,c <> s)}
+  [findAllNodes] checking node {4}, {II}, {(a,b,c <> s)} (4)
+  [findAllNodes] out edges:
+  "{4}, {II}, {(a,b,c <> s)}" ->  "{4}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+  [findAllNodes] no empty edge
+[findAllNodes] done.
+
+    current vertex: {({2}, {II}, {(a,b,c <> s)}), ({3}, {II}, {(a,b,c <> s)}), ({4}, {II}, {(a,b,c <> s)})} role: 
+    vertex is new, adding vertex, edge and todo
+
+
+  grouping s,t:
+    no edge for label, adding edge to empty state
+
+
+
+Todo:
+{({2}, {II}, {(a,b,c <> s)}), ({3}, {II}, {(a,b,c <> s)}), ({4}, {II}, {(a,b,c <> s)})}
+
+
+
+checking node: {({2}, {II}, {(a,b,c <> s)}), ({3}, {II}, {(a,b,c <> s)}), ({4}, {II}, {(a,b,c <> s)})}
+  out edges:
+  "{2}, {II}, {(a,b,c <> s)}" ->  "{3}, {II}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+  "{2}, {II}, {(a,b,c <> s)}" ->  "{2}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+  "{3}, {II}, {(a,b,c <> s)}" ->  "{4}, {II}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+  "{3}, {II}, {(a,b,c <> s)}" ->  "{3}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+  "{4}, {II}, {(a,b,c <> s)}" ->  "{4}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+
+  grouping s | s,t:
+    has edge for label
+    label: s | s,t
+    edges:
+  "{2}, {II}, {(a,b,c <> s)}" ->  "{2}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+  "{3}, {II}, {(a,b,c <> s)}" ->  "{3}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+  "{4}, {II}, {(a,b,c <> s)}" ->  "{4}, {III}, {(a,b,c <> s)}" [label="{-}, {s | s,t}", gp1="-", gp2="s | s,t"]
+    destinations:
+{2}, {III}, {(a,b,c <> s)}
+{3}, {III}, {(a,b,c <> s)}
+{4}, {III}, {(a,b,c <> s)}
+    dsts are sub: 0
+[findAllNodes] start at {2}, {III}, {(a,b,c <> s)}
+  [findAllNodes] checking node {2}, {III}, {(a,b,c <> s)} (3)
+  [findAllNodes] out edges:
+  "{2}, {III}, {(a,b,c <> s)}" ->  "{3}, {III}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+  [findAllNodes] empty edges:
+  "{2}, {III}, {(a,b,c <> s)}" ->  "{3}, {III}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+    [findAllNodes] checking dst {3}, {III}, {(a,b,c <> s)}
+    [findAllNodes] already contained
+[findAllNodes] start at {3}, {III}, {(a,b,c <> s)}
+  [findAllNodes] checking node {3}, {III}, {(a,b,c <> s)} (5)
+  [findAllNodes] out edges:
+  "{3}, {III}, {(a,b,c <> s)}" ->  "{4}, {III}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+  [findAllNodes] empty edges:
+  "{3}, {III}, {(a,b,c <> s)}" ->  "{4}, {III}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+    [findAllNodes] checking dst {4}, {III}, {(a,b,c <> s)}
+    [findAllNodes] already contained
+[findAllNodes] start at {4}, {III}, {(a,b,c <> s)}
+  [findAllNodes] checking node {4}, {III}, {(a,b,c <> s)} (6)
+  [findAllNodes] no out edges, done.
+[findAllNodes] done.
+
+    current vertex: {({2}, {III}, {(a,b,c <> s)}), ({3}, {III}, {(a,b,c <> s)}), ({4}, {III}, {(a,b,c <> s)})} role: end
+    vertex is new, adding vertex, edge and todo
+
+
+  grouping s,t:
+    no edge for label, adding edge to empty state
+
+
+
+Todo:
+{({2}, {III}, {(a,b,c <> s)}), ({3}, {III}, {(a,b,c <> s)}), ({4}, {III}, {(a,b,c <> s)})}
+
+
+
+checking node: {({2}, {III}, {(a,b,c <> s)}), ({3}, {III}, {(a,b,c <> s)}), ({4}, {III}, {(a,b,c <> s)})}
+  out edges:
+  "{2}, {III}, {(a,b,c <> s)}" ->  "{3}, {III}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+  "{3}, {III}, {(a,b,c <> s)}" ->  "{4}, {III}, {(a,b,c <> s)}" [label="{a,b,c | a,c}, {-}", gp1="a,b,c | a,c", gp2="-"]
+
+  grouping s | s,t:
+    no edge for label, adding edge to empty state
+
+
+  grouping s,t:
+    no edge for label, adding edge to empty state
+
+
+
+Todo:
+
+
+
+working on: {1}, {({1}, {I}, {})}
+  checking label a
+  destination: {2}, {({2}, {II}, {(a,b,c <> s)}), ({2}, {III}, {(a,b,c <> s)})}
+  adding new destination
+
+ToDo:
+{2}, {({2}, {II}, {(a,b,c <> s)}), ({2}, {III}, {(a,b,c <> s)})}
+
+Visited:
+{1}, {({1}, {I}, {})}
+
+
+
+
+
+working on: {2}, {({2}, {II}, {(a,b,c <> s)}), ({2}, {III}, {(a,b,c <> s)})}
+  checking label a
+  destination: {3}, {({3}, {II}, {(a,b,c <> s)}), ({3}, {III}, {(a,b,c <> s)})}
+  adding new destination
+
+ToDo:
+{3}, {({3}, {II}, {(a,b,c <> s)}), ({3}, {III}, {(a,b,c <> s)})}
+
+Visited:
+{1}, {({1}, {I}, {})}
+{2}, {({2}, {II}, {(a,b,c <> s)}), ({2}, {III}, {(a,b,c <> s)})}
+
+
+
+
+
+working on: {3}, {({3}, {II}, {(a,b,c <> s)}), ({3}, {III}, {(a,b,c <> s)})}
+  checking label a
+  destination: {4}, {({4}, {II}, {(a,b,c <> s)}), ({4}, {III}, {(a,b,c <> s)})}
+  adding new destination
+
+ToDo:
+{4}, {({4}, {II}, {(a,b,c <> s)}), ({4}, {III}, {(a,b,c <> s)})}
+
+Visited:
+{1}, {({1}, {I}, {})}
+{2}, {({2}, {II}, {(a,b,c <> s)}), ({2}, {III}, {(a,b,c <> s)})}
+{3}, {({3}, {II}, {(a,b,c <> s)}), ({3}, {III}, {(a,b,c <> s)})}
+
+
+
+
+
+working on: {4}, {({4}, {II}, {(a,b,c <> s)}), ({4}, {III}, {(a,b,c <> s)})}
+ToDo:
+
+Visited:
+{1}, {({1}, {I}, {})}
+{2}, {({2}, {II}, {(a,b,c <> s)}), ({2}, {III}, {(a,b,c <> s)})}
+{3}, {({3}, {II}, {(a,b,c <> s)}), ({3}, {III}, {(a,b,c <> s)})}
+{4}, {({4}, {II}, {(a,b,c <> s)}), ({4}, {III}, {(a,b,c <> s)})}
+
+
+
+
+
+working on: {I}, {({1}, {I}, {})}
+  checking label s
+  destination: {II}, {({2}, {II}, {(a,b,c <> s)}), ({3}, {II}, {(a,b,c <> s)}), ({4}, {II}, {(a,b,c <> s)})}
+  adding new destination
+
+ToDo:
+{II}, {({2}, {II}, {(a,b,c <> s)}), ({3}, {II}, {(a,b,c <> s)}), ({4}, {II}, {(a,b,c <> s)})}
+
+Visited:
+{I}, {({1}, {I}, {})}
+
+
+
+
+
+working on: {II}, {({2}, {II}, {(a,b,c <> s)}), ({3}, {II}, {(a,b,c <> s)}), ({4}, {II}, {(a,b,c <> s)})}
+  checking label s
+  destination: {III}, {({2}, {III}, {(a,b,c <> s)}), ({3}, {III}, {(a,b,c <> s)}), ({4}, {III}, {(a,b,c <> s)})}
+  adding new destination
+
+ToDo:
+{III}, {({2}, {III}, {(a,b,c <> s)}), ({3}, {III}, {(a,b,c <> s)}), ({4}, {III}, {(a,b,c <> s)})}
+
+Visited:
+{I}, {({1}, {I}, {})}
+{II}, {({2}, {II}, {(a,b,c <> s)}), ({3}, {II}, {(a,b,c <> s)}), ({4}, {II}, {(a,b,c <> s)})}
+
+
+
+
+
+working on: {III}, {({2}, {III}, {(a,b,c <> s)}), ({3}, {III}, {(a,b,c <> s)}), ({4}, {III}, {(a,b,c <> s)})}
+ToDo:
+
+Visited:
+{I}, {({1}, {I}, {})}
+{II}, {({2}, {II}, {(a,b,c <> s)}), ({3}, {II}, {(a,b,c <> s)}), ({4}, {II}, {(a,b,c <> s)})}
+{III}, {({2}, {III}, {(a,b,c <> s)}), ({3}, {III}, {(a,b,c <> s)}), ({4}, {III}, {(a,b,c <> s)})}
+
+
+
+
+
+g1 vs dwgLhs: 1
+g2 vs dwgRhs: 1
