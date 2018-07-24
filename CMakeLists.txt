@@ -27,6 +27,6 @@ add_definitions (-D ISO_LIB_ENFORCE_MAXIMALITY=1)
 set (Boost_USE_STATIC_LIBS OFF)
 set (Boost_USE_MULTITHREADED ON)
 set (Boost_USE_STATIC_RUNTIME OFF)
-find_package (Boost 1.50 COMPONENTS graph)
+find_package (Boost 1.50 COMPONENTS graph program_options)
 
-subdirs (iso-dev iso-decision iso-lib)
+subdirs (iso-lib iso-decision iso-search)

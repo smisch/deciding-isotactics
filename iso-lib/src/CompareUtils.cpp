@@ -73,7 +73,7 @@ bool Cmp::isEqual(const DG_t &g, const DWG_t &dwg, const labelGroupingMap &lgm) 
       DEBUG << "  destination: " << Cmp::vpToString(dst.pair, g, dwg) << std::endl;
 
       if (isExitCondition(dst.pair, g, dwg)) {
-        std::cout << "\nexit condition at: " << vertexToString(dst, g, dwg) << std::endl;
+        // std::cout << "\nexit condition at: " << vertexToString(dst, g, dwg) << std::endl;
         return false;
       }
 
